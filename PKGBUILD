@@ -12,8 +12,7 @@ provides=('cxx-run')
 conflicts=('cxx-run')
 
 pkgver() {
-  cd ${pkgname%-git}
-  git log -1 --format=format:'%as-%f' | tr - .
+  echo $pkgver
 }
 
 build() {
