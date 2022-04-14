@@ -1,5 +1,5 @@
 pkgname=cxx-run
-pkgver=2022.04.14.changed.main
+pkgver=2022.04.14.added.install
 pkgrel=1
 pkgdesc="simple, clean and customisable run dialog in sfml"
 arch=('x86_64')
@@ -26,11 +26,11 @@ build() {
 package() {
   cd ${pkgname%-git}
 
-  msg2 'Installing binaries...'
-  install -Dm 766 cxx-run -t "$pkgidr" /usr/bin
+  msg2 'Installing executables...'
+  install -Dm 755 cxx-run -t "$pkgdir"/usr/bin
 
   msg2 'Cleaning up pkgdir...'
   find "$pkgdir" -type d -name .git -exec rm -r '{}' +
-
+  
   msg2 'Config avatar path ==> $HOME/.config/cxx-run.conf'
 }
