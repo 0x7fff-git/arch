@@ -1,3 +1,5 @@
+# Maintainer: 3llena-arch <3llena-arch@protonmail.com>
+
 pkgname=cxx-run
 pkgver=2022.04.14.added.install
 pkgrel=1
