@@ -7,11 +7,11 @@
 #include <fstream>
 #include <string>
 
-#include "dep/font.hxx"
-#include "dep/back.hxx"
+#include "shared/font.hxx"
+#include "shared/back.hxx"
 
 std::int32_t main( ) {
-   const auto sf_path = std::string{ std::getenv( "HOME" ) } + "/.config/xorg/.run";
+   const auto sf_path = std::string{ std::getenv( "HOME" ) } + "/.config/cxx-run.conf";
    if ( !std::filesystem::exists( sf_path ) )
       return 0;
    
