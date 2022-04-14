@@ -16,7 +16,8 @@ pkgver() {
 }
 
 build() {
-  cd ${pkgname%-git}
+  cd src/arch/
+  chmod +x ./build
   ./build
 }
 
@@ -24,7 +25,7 @@ package() {
   cd ${pkgname%-git}
 
   msg2 'Installing executables...'
-  install -Dm 755 await -t "$pkgdir"/usr/bin
+  install -Dm 755 cxx-run -t src/arch/cxx-run /usr/bin
 
   msg2 'Cleaning up pkgdir...'
   find "$pkgdir" -type d -name .git -exec rm -r '{}' +
