@@ -147,7 +147,7 @@ std::int32_t main(
    
    const sf::RenderWindow sf_win{ { std::stoi( config[ "window_size_x" ] ), 
          std::stoi( config[ "window_size_y" ] ) }, "", 0 };
-   sf_win.setPosition( { std::stoi( config[ "window_pos_x" ] ), std::stoi( config[ "window_pos_x" ] ) } );
+   sf_win.setPosition( { std::stoi( config[ "window_pos_x" ] ), std::stoi( config[ "window_pos_y" ] ) } );
    sf_win.setFramerateLimit( std::stoi( config[ "window_rate" ] ) );
    sf_win.setVerticalSyncEnabled( std::stoi( config[ "window_vsync" ] ) );
    
