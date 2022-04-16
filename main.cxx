@@ -132,11 +132,11 @@ std::int32_t main(
             "git: https://github.com/3llena-arch/cxx-run\n\n"
             "t. 3llena-arch <3llena-arch@protonmail.com>"
          } << std::endl;
-         break;
+         return 0;
       case 0xa4:
       case 0x35c:
          std::cout << "version: 16-04-2022 (build)" << std::endl;
-         break;
+         return 0;
       case 0xa1:
       case 0x43a:
          if ( !parse_config( config, "/.config/cxx-run/config" ) )
