@@ -1,5 +1,3 @@
-![Alt text](/SCREENSHOT?raw=true "cxx-run media")
-
 usage: cxx-run [option]
 	-h, --help		: displays this page
 	-u, --use-config	: use custom config
