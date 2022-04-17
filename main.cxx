@@ -135,7 +135,7 @@ std::int32_t main(
          return 0;
       case 0xa4:
       case 0x35c:
-         std::cout << "version: 16-04-2022 (build)" << std::endl;
+         std::cout << "version: 16.04.2022-3 (build)" << std::endl;
          return 0;
       case 0xa1:
       case 0x43a:
