@@ -55,6 +55,11 @@ const std::int8_t parse_config(
       std::cerr << "* parse_config: config or path was empty" << std::endl;
       return 0;
    }
+
+   if ( std::string{ std::getenv( "DISPLAY" ) }.empty( ) ) {
+      std::cerr << "* parse_config: cannot open display" << std::endl;
+      return 0;
+   }
    
    const auto abs_path = std::string{ std::getenv( "HOME" ) } + config_path.c_str( );  
    if ( !std::filesystem::exists( abs_path ) ) {
@@ -112,6 +117,7 @@ std::int32_t main(
    const std::int32_t argc,
    const std::int8_t* argv[ ]
 ) {
+   sf::err( ).clear( std::ios::failbit );
    for ( std::size_t i{ 1 }; i < argc; i++ ) {
       auto ctx = std::string_view{ reinterpret_cast< const char* >( argv[ i ] ) };
       if ( ctx.empty( ) )
@@ -135,7 +141,7 @@ std::int32_t main(
          return 0;
       case 0xa4:
       case 0x35c:
-         std::cout << "version: 16.04.2022-3 (build)" << std::endl;
+         std::cout << "version: 24.04.2022-3 (build)" << std::endl;
          return 0;
       case 0xa1:
       case 0x43a:
